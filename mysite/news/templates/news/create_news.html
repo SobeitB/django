@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'news/css/style.css' %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+		<div class="add_news">
+
+			<h3 class="title_massage">Сообщения:</h3>
+			<div class="container_massage">
+				{% for i in massage %}
+					<div class="alert_news">
+						<h3 class="title_news">{{ i.name }}</h3>
+						<div class="flex_name_date">
+							<h3 class="massage_user">{{ i.massage }}</h3>
+							<h3 class="date_user">{{ i.date }}</h3>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+
+			<form method="post" id="form">
+				{% csrf_token %}
+				{{ form.name }}<br>
+				{{ form.massage }}<br>
+				{{ form.date }}<br>
+				<span>{{ error }}</span>
+				<button name="add_news" type="submit" class="add_but">Написать сообщение</button>
+			</form>
+		</div>
+
+	<script type="text/javascript">
+		$(function() {
+			$('#form').on('submit', function(e) {
+				e.preventDefualt()
+				$.ajax({
+					method: "POST",
+					url: "{% url 'create_news' %}",
+					data: $(this).serialize(),
+					success: function(response) {
+						if (response.is_taken() === true) {
+							console.log('dsds')
+						}
+					}
+				})
+			})
+		})
+	</script>
+</body>
+</html>

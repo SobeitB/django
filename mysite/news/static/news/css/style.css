@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+}
+
+.title_news{
+	text-align: left;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 120.2%;
+	color: #4A4A4A;
+	margin-top: 10px;
+}
+
+.massage_user{
+	text-align: center;
+}
+
+.news_main{
+	margin: 0 auto;
+	background: #FFAA85;
+	border-radius: 50px;
+	text-align: center;
+	width: 400px;
+	height: 600px;
+	margin-top: 100px;
+}
+
+.add_but{
+	width: 200px;
+	height: 50px;
+	border-radius: 5px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 120.2%;
+	color: #4A4A4A;
+	border: none;
+	margin-top: 40px;
+}
+
+.add_news{
+	margin: 0 auto;
+	width: 400px;
+	height: 600px;
+	border-radius: 50px;
+	background: #FFAA85;
+	margin-top: 100px;
+}
+
+.container_massage{
+	text-align: center;
+	height: 250px;
+	overflow: auto;
+}
+
+.title_massage{
+	text-align: center;
+	color: white;
+}
+
+.flex_name_date{
+	display: flex;
+	margin-top: 10px;
+}
+
+.date_user{
+	font-size: 15px;
+	line-height: 120.2%;
+	text-align: center;
+	color: #4A4A4A;
+	margin-left: 10px;
+}
+
+#form{
+	text-align: center;
+}
+
+.inp{
+	margin-top: 10px;
+	width: 250px;
+	height: 50px;
+	border-radius: 10px;
+	border: none;
+}
